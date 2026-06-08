@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, digit, count;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    count = 0;
+
+    for (; n > 0; n = n / 10)
+    {
+        digit = n % 10;
+
+        if (digit == 0 || digit == 1 || digit == 4 || digit == 9)
+        {
+            count = count + 1;
+        }
+    }
+
+    printf("Output: %d", count);
+
+    return 0;
+}
